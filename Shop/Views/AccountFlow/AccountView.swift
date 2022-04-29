@@ -26,7 +26,9 @@ struct AccountView: View {
                         .fontWeight(.bold)
                 }
                 
-                Text("Корзина")
+                NavigationLink(destination: BasketView()) {
+                    Text("Корзина")
+                }
                 
                 Button(action: {
                     viewModel.exitFromAccount()

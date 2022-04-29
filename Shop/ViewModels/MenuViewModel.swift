@@ -16,6 +16,7 @@ class MenuViewModel: ObservableObject {
         products = []
         for element in databaseManager.savedProducts {
             let product = ProductModel(
+                id: element.uuid,
                 imageName: getProductType(from: element.imageName),
                 name: element.name,
                 productType: getProductType(from: element.productType),

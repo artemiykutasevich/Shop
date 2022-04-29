@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ProductModel: Identifiable {
-    let id = UUID()
+    let id: UUID
     let imageName: ProductType
     let name: String
     let productType: ProductType

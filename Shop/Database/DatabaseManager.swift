@@ -46,6 +46,30 @@ class DatabaseManager {
         }
     }
     
+    func addToBasket(for user: DatabaseUser, product: DatabaseProduct) {
+        try! realm.write {
+            user.basket.append(product)
+        }
+    }
+    
+    func addToBasket(for userID: UUID, product productID: UUID) {
+        let user = findDatabaseUser(by: userID)
+        let product = findDatabaseProduct(by: productID)
+        
+        try! realm.write {
+            user.basket.append(product)
+        }
+    }
+    
+    func getBasket(for user: DatabaseUser) -> List<DatabaseProduct> {
+        return user.basket
+    }
+    
+    func getBasket(for userID: UUID) -> List<DatabaseProduct> {
+        let user = findDatabaseUser(by: userID)
+        return user.basket
+    }
+    
     private func setUp(_ databaseProduct: DatabaseProduct, from productModel: ProductModel) -> DatabaseProduct {
         databaseProduct.uuid = productModel.id
         databaseProduct.imageName = productModel.imageName.rawValue
@@ -54,5 +78,15 @@ class DatabaseManager {
         databaseProduct.body = productModel.body
         databaseProduct.price = productModel.price
         return databaseProduct
+    }
+    
+    private func findDatabaseUser(by uuid: UUID) -> DatabaseUser {
+        let user = realm.objects(DatabaseUser.self).where({$0.uuid == uuid}).first!
+        return user
+    }
+    
+    private func findDatabaseProduct(by uuid: UUID) -> DatabaseProduct {
+        let product = realm.objects(DatabaseProduct.self).where({$0.uuid == uuid}).first!
+        return product
     }
 }

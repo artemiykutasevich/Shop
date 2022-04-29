@@ -33,6 +33,6 @@ struct ProductView: View {
 
 struct ProductView_Previews: PreviewProvider {
     static var previews: some View {
-        ProductView(product: ProductModel(imageName: .fruits, name: "banana", productType: .fruits, body: "very ymmy", price: 10.2))
+        ProductView(product: ProductModel(id: UUID(), imageName: .fruits, name: "banana", productType: .fruits, body: "very ymmy", price: 10.2))
     }
 }

@@ -9,6 +9,8 @@ import SwiftUI
 
 struct DetailView: View {
     @AppStorage("ActiveUserID") private var activeUserID: String = ""
+    @State private var showingAlert = false
+    
     let databaseManager = DatabaseManager.databaseManager
     
     let product: ProductModel
@@ -47,9 +49,11 @@ struct DetailView: View {
             }
             
             Button(action: {
-                // MARK: add logic
+                addToBasket()
+                showingAlert = true
             }, label: {
                 Text("Положить в корзину")
+                    .fontWeight(.bold)
                     .foregroundColor(.primary)
                     .styleButton(color: .gray)
             })
@@ -57,15 +61,25 @@ struct DetailView: View {
             .ignoresSafeArea()
             .offset(y: -60)
         }
+        .alert("Товар добавлен в корзину", isPresented: $showingAlert) {
+            Button("Good", role: .cancel) {}
+        }
         .navigationTitle("About \(product.name)")
         .navigationBarTitleDisplayMode(.inline)
         .background(Color("Color-4").ignoresSafeArea())
+    }
+    
+    func addToBasket() {
+        databaseManager.addToBasket(
+            for: UUID(uuidString: activeUserID)!,
+            product: product.id)
     }
 }
 
 struct DetailView_Previews: PreviewProvider {
     static var previews: some View {
         DetailView(product: ProductModel(
+            id: UUID(),
             imageName: .fruits,
             name: "banana",
             productType: .fruits,

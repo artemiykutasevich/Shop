@@ -19,6 +19,7 @@ class AddProductViewModel: ObservableObject {
     
     func addProduct() {
         let model = ProductModel(
+            id: UUID(),
             imageName: selectedType,
             name: nameTextField,
             productType: selectedType,
