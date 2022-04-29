@@ -9,7 +9,7 @@ import Foundation
 import RealmSwift
 
 class DatabaseProduct: Object, Identifiable {
-    @Persisted var id: UUID
+    @Persisted var uuid: UUID
     @Persisted var imageName: String
     @Persisted var name: String
     @Persisted var productType: String

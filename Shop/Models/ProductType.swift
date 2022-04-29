@@ -7,7 +7,9 @@
 
 import Foundation
 
-enum ProductType: String, CaseIterable {
+enum ProductType: String, CaseIterable, Identifiable {
+    var id: ProductType { self }
+    
     case fruits
     case vegetables
     case other

@@ -34,6 +34,8 @@
 		B8BC9985281C54C100806F64 /* MenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8BC9984281C54C100806F64 /* MenuViewModel.swift */; };
 		B8BC9987281C552400806F64 /* AccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8BC9986281C552400806F64 /* AccountViewModel.swift */; };
 		B8BC998C281C570500806F64 /* BasketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8BC998B281C570500806F64 /* BasketView.swift */; };
+		B8BC998F281C799000806F64 /* AddProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8BC998E281C799000806F64 /* AddProductView.swift */; };
+		B8BC9991281C7DC400806F64 /* AddProductViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8BC9990281C7DC400806F64 /* AddProductViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +65,8 @@
 		B8BC9984281C54C100806F64 /* MenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewModel.swift; sourceTree = "<group>"; };
 		B8BC9986281C552400806F64 /* AccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewModel.swift; sourceTree = "<group>"; };
 		B8BC998B281C570500806F64 /* BasketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketView.swift; sourceTree = "<group>"; };
+		B8BC998E281C799000806F64 /* AddProductView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProductView.swift; sourceTree = "<group>"; };
+		B8BC9990281C7DC400806F64 /* AddProductViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProductViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +149,7 @@
 				B8BC9988281C569B00806F64 /* Authorization */,
 				B8BC9989281C56A800806F64 /* MenuFlow */,
 				B8BC998A281C56C300806F64 /* AccountFlow */,
+				B8BC998D281C796400806F64 /* AdminFlow */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -155,6 +160,7 @@
 				B8BC9974281C2B7D00806F64 /* AuthorizationViewModel.swift */,
 				B8BC9984281C54C100806F64 /* MenuViewModel.swift */,
 				B8BC9986281C552400806F64 /* AccountViewModel.swift */,
+				B8BC9990281C7DC400806F64 /* AddProductViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -220,6 +226,14 @@
 				B8BC998B281C570500806F64 /* BasketView.swift */,
 			);
 			path = AccountFlow;
+			sourceTree = "<group>";
+		};
+		B8BC998D281C796400806F64 /* AdminFlow */ = {
+			isa = PBXGroup;
+			children = (
+				B8BC998E281C799000806F64 /* AddProductView.swift */,
+			);
+			path = AdminFlow;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -311,6 +325,8 @@
 				B8BC9944281C1C8600806F64 /* ShopApp.swift in Sources */,
 				B8BC9969281C1F1F00806F64 /* AccountView.swift in Sources */,
 				B8BC998C281C570500806F64 /* BasketView.swift in Sources */,
+				B8BC998F281C799000806F64 /* AddProductView.swift in Sources */,
+				B8BC9991281C7DC400806F64 /* AddProductViewModel.swift in Sources */,
 				B8BC995E281C1E2F00806F64 /* TabItem.swift in Sources */,
 				B8BC996F281C20FE00806F64 /* DatabaseUser.swift in Sources */,
 				B8BC9983281C4D6100806F64 /* DetailView.swift in Sources */,

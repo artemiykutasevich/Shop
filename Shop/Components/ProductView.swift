@@ -12,23 +12,27 @@ struct ProductView: View {
     
     var body: some View {
         ZStack {
-            product.image
+            Image(product.imageName.rawValue)
                 .resizable()
-                .scaledToFit()
-                .foregroundColor(.white)
+                .scaledToFill()
+                .frame(height: 70)
+                .blur(radius: 5)
+                .cornerRadius(25)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 25)
+                        .strokeBorder(lineWidth: 1, antialiased: false))
             
             Text(product.name)
-                .font(.title3)
+                .font(.title)
                 .fontWeight(.bold)
-                .frame(width: 120, height: 20, alignment: .bottom)
+                .foregroundColor(.white)
         }
-        .frame(width: 120, height: 120, alignment: .center)
-        .background(.blue, in: RoundedRectangle(cornerRadius: 20))
+        .frame(height: 70, alignment: .center)
     }
 }
 
 struct ProductView_Previews: PreviewProvider {
     static var previews: some View {
-        ProductView(product: ProductModel(image: Image(systemName: "mic"), name: "banan", productType: .fruits, body: "very ymmy", price: 10.2))
+        ProductView(product: ProductModel(imageName: .fruits, name: "banana", productType: .fruits, body: "very ymmy", price: 10.2))
     }
 }

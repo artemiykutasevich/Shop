@@ -10,19 +10,15 @@ import SwiftUI
 struct MenuView: View {
     @StateObject private var viewModel = MenuViewModel()
     
-    let element = ProductModel(
-        image: Image(systemName: "mic"),
-        name: "banana",
-        productType: .fruits,
-        body: "very yummy",
-        price: 10.0)
-    
     var body: some View {
         NavigationView {
             ScrollView {
-                NavigationLink(destination: DetailView(product: element)) {
-                    ProductView(product: element)
-                        .foregroundColor(.primary)
+                ForEach(viewModel.products) { product in
+                    NavigationLink(destination: DetailView(product: product)) {
+                        ProductView(product: product)
+                            .foregroundColor(.primary)
+                    }
+                    .padding([.leading, .trailing])
                 }
             }
             .safeAreaInset(edge: .bottom) {
@@ -30,6 +26,9 @@ struct MenuView: View {
             }
             .background(Color("Color-4").ignoresSafeArea())
             .navigationTitle("Shop")
+        }
+        .onAppear() {
+            viewModel.setUpProducts()
         }
     }
 }

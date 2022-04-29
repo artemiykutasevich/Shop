@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct TextFieldStyles: ViewModifier {
+private struct TextFieldStyles: ViewModifier {
     var cornerRadius: CGFloat
     
     func body(content: Content) -> some View {

@@ -15,6 +15,8 @@ struct ContentView: View {
         ZStack {
             if activeUserID == "" {
                 AuthorizationView()
+            } else if activeUserID == "Admin" {
+                AddProductView()
             } else {
                 Group {
                     switch selectedTab {
