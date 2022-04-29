@@ -24,6 +24,7 @@ struct AccountView: View {
                     Text("Name")
                         .font(.title)
                         .fontWeight(.bold)
+                    Text("Basket: \(viewModel.getBasketValue().description)$")
                 }
                 
                 NavigationLink(destination: BasketView()) {

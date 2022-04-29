@@ -16,9 +16,6 @@ struct BasketView: View {
                 Text(element.name)
             }
         }
-        .onAppear() {
-            viewModel.setUpBasket()
-        }
         .navigationTitle("Basket")
         .navigationBarTitleDisplayMode(.inline)
     }

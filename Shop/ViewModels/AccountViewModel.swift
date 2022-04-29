@@ -13,7 +13,7 @@ class AccountViewModel: ObservableObject {
     
     private let databaseManager = DatabaseManager.databaseManager
     
-    func setUpBasket() {
+    init() {
         let list = databaseManager.getBasket(for: UUID(uuidString: activeUserID) ?? UUID())
         basket = []
         
@@ -27,6 +27,14 @@ class AccountViewModel: ObservableObject {
                 price: element.price)
             basket.append(product)
         }
+    }
+    
+    func getBasketValue() -> Double {
+        var price = 0.0
+        for element in basket {
+            price += element.price
+        }
+        return price
     }
     
     func exitFromAccount() {
