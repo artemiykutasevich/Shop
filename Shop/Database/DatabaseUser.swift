@@ -14,5 +14,6 @@ class DatabaseUser: Object, Identifiable {
     @Persisted var password: String
     
     @Persisted var basket = List<DatabaseProduct>()
+    @Persisted var orders = List<DatabaseOrder>()
 }
 

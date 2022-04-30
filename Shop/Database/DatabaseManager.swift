@@ -70,6 +70,26 @@ class DatabaseManager {
         return user.basket
     }
     
+    func makeOrder(for userID: UUID) {
+        let user = findDatabaseUser(by: userID)
+        let basket = getBasket(for: userID)
+        
+        let order = DatabaseOrder()
+        order.uuid = UUID()
+        order.dateOfOrder = Date()
+        order.products = basket
+        
+        try! realm.write {
+            user.orders.append(order)
+            user.basket.removeAll()
+        }
+    }
+    
+    func getOrders(for userID: UUID) -> List<DatabaseOrder> {
+        let user = findDatabaseUser(by: userID)
+        return user.orders
+    }
+    
     private func setUp(_ databaseProduct: DatabaseProduct, from productModel: ProductModel) -> DatabaseProduct {
         databaseProduct.uuid = productModel.id
         databaseProduct.imageName = productModel.imageName.rawValue

@@ -55,7 +55,7 @@ struct DetailView: View {
                 Text("Положить в корзину")
                     .fontWeight(.bold)
                     .foregroundColor(.primary)
-                    .styleButton(color: .gray)
+                    .graffitiButtonStyle(color: .gray)
             })
             .frame(maxHeight: .infinity, alignment: .bottom)
             .ignoresSafeArea()

@@ -10,7 +10,9 @@ import SwiftUI
 struct TabBar: View {
     @AppStorage("selectedTab") var selectedTab: Tab = .menu
     @State var tabItemWidth: CGFloat = 0
-    let backgroundColor = Color("Color-3")
+    let backgroundColor = Color("Color-2")
+    let frontColor = Color("Color-4")
+    let backColor = Color("Color-3")
     
     var body: some View {
         ZStack(alignment: .bottom) {
@@ -22,6 +24,8 @@ struct TabBar: View {
             .padding(.top, 14)
             .frame(height: 88, alignment: .top)
             .background(backgroundColor, in: RoundedRectangle(cornerRadius: 34, style: .continuous))
+            .overlay(RoundedRectangle(cornerRadius: 34).strokeBorder(lineWidth: 3, antialiased: true))
+            .foregroundColor(backColor)
             .frame(maxHeight: .infinity, alignment: .bottom)
             .ignoresSafeArea()
             .navigationBarBackButtonHidden(true)
@@ -45,7 +49,7 @@ struct TabBar: View {
                 }
                 .frame(maxWidth: .infinity)
             }
-            .foregroundStyle(selectedTab == item.tab ? .primary : .secondary)
+            .foregroundStyle(selectedTab == item.tab ? frontColor : backColor)
             .overlay(
                 GeometryReader { proxy in
                     Color.clear.preference(key: TabPreferenceKey.self, value: proxy.size.width)

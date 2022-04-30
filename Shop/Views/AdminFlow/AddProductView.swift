@@ -14,11 +14,11 @@ struct AddProductView: View {
         NavigationView {
             ScrollView {
                 TextField("product name", text: $viewModel.nameTextField)
-                    .styleTextField()
+                    .graffitiTextFieldStyle()
                 TextField("product description", text: $viewModel.bodyTextField)
-                    .styleTextField()
+                    .graffitiTextFieldStyle()
                 TextField("product price", text: $viewModel.priceTextField)
-                    .styleTextField()
+                    .graffitiTextFieldStyle()
                 Picker("", selection: $viewModel.selectedType) {
                     ForEach(ProductType.allCases) { type in
                         Text(type.rawValue)
@@ -33,7 +33,7 @@ struct AddProductView: View {
                     Text("Save")
                         .fontWeight(.bold)
                         .foregroundColor(Color("Color-2"))
-                        .styleButton(color: Color("Color-2"))
+                        .graffitiButtonStyle(color: Color("Color-2"))
                 })
                 
                 Button(action: {
@@ -42,7 +42,7 @@ struct AddProductView: View {
                     Text("Exit")
                         .fontWeight(.bold)
                         .foregroundColor(Color("Color-1"))
-                        .styleButton(color: Color("Color-1"))
+                        .graffitiButtonStyle(color: Color("Color-1"))
                 })
             }
             .navigationTitle("Add new product")

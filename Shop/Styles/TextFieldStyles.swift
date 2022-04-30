@@ -24,7 +24,7 @@ private struct TextFieldStyles: ViewModifier {
 }
 
 extension TextField {
-    func styleTextField(cornerRadius: CGFloat = 20) -> some View {
+    func graffitiTextFieldStyle(cornerRadius: CGFloat = 20) -> some View {
         self.modifier(TextFieldStyles(cornerRadius: cornerRadius))
     }
 }

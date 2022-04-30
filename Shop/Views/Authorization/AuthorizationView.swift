@@ -9,14 +9,15 @@ import SwiftUI
 
 struct AuthorizationView: View {
     @StateObject private var viewModel = AuthorizationViewModel()
+    let color = Color("Color-1")
     
     var body: some View {
         NavigationView {
-            VStack {
+            ScrollView {
                 TextField("Login", text: $viewModel.loginTextField)
-                    .styleTextField()
+                    .graffitiTextFieldStyle()
                 TextField("Password", text: $viewModel.passwordTextField)
-                    .styleTextField()
+                    .graffitiTextFieldStyle()
                 
                 HStack {
                     Spacer()
@@ -25,20 +26,21 @@ struct AuthorizationView: View {
                     }, label: {
                         Text("Вход")
                             .fontWeight(.bold)
-                            .foregroundColor(Color("Color"))
-                            .styleButton(color: Color("Color"))
+                            .foregroundColor(color)
+                            .graffitiButtonStyle(color: color)
                     })
                     Spacer()
                     NavigationLink(destination: RegistrationView()) {
                         Text("Регистрация")
                             .fontWeight(.bold)
-                            .foregroundColor(Color("Color-1"))
-                            .styleButton(color: Color("Color-1"))
+                            .foregroundColor(color)
+                            .graffitiButtonStyle(color: color)
                     }
                     Spacer()
                 }
             }
             .navigationTitle("Authorization")
+            .background(Color("Color").ignoresSafeArea())
         }
     }
 }

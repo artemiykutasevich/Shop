@@ -30,7 +30,7 @@ struct ButtonStyles: ViewModifier {
 }
 
 extension View {
-    func styleButton(cornerRadius: CGFloat = 20, color: Color) -> some View {
+    func graffitiButtonStyle(cornerRadius: CGFloat = 20, color: Color) -> some View {
         self.modifier(ButtonStyles(cornerRadius: cornerRadius, color: color))
     }
 }

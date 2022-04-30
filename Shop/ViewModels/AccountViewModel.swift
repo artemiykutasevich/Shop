@@ -6,14 +6,26 @@
 //
 
 import SwiftUI
+import RealmSwift
 
 class AccountViewModel: ObservableObject {
     @AppStorage("ActiveUserID") private var activeUserID: String = ""
     @Published var basket = [ProductModel]()
+    @Published var orders = [OrderModel]()
     
     private let databaseManager = DatabaseManager.databaseManager
     
     init() {
+        setUpBasket()
+        setUpOrders()
+    }
+    
+    func payForGoods() {
+        databaseManager.makeOrder(for: UUID(uuidString: activeUserID) ?? UUID())
+        setUpBasket()
+    }
+    
+    func setUpBasket() {
         let list = databaseManager.getBasket(for: UUID(uuidString: activeUserID) ?? UUID())
         basket = []
         
@@ -26,6 +38,19 @@ class AccountViewModel: ObservableObject {
                 body: element.body,
                 price: element.price)
             basket.append(product)
+        }
+    }
+    
+    func setUpOrders() {
+        let list = databaseManager.getOrders(for: UUID(uuidString: activeUserID) ?? UUID())
+        orders = []
+        
+        for element in list {
+            let order = OrderModel(
+                id: element.uuid,
+                dateOfOrder: element.dateOfOrder,
+                listOfProducts: element.products)
+            orders.append(order)
         }
     }
     
