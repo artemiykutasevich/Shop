@@ -1,5 +1,5 @@
 //
-//  AddProductViewModel.swift
+//  AdminViewModel.swift
 //  Shop
 //
 //  Created by Artem Kutasevich on 29.04.22.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-class AddProductViewModel: ObservableObject {
+class AdminViewModel: ObservableObject {
     @AppStorage("ActiveUserID") private var activeUserID: String = ""
     
     @Published var nameTextField = ""
@@ -15,7 +15,22 @@ class AddProductViewModel: ObservableObject {
     @Published var priceTextField = ""
     @Published var selectedType: ProductType = .other
     
+    @Published var orders = [OrderModel]()
+    
     let databaseManager = DatabaseManager.databaseManager
+    
+    func setUpOrders() {
+        let savedOrders = databaseManager.savedOrders
+        orders = []
+        
+        for element in savedOrders {
+            let order = OrderModel(
+                id: element.uuid,
+                dateOfOrder: element.dateOfOrder,
+                listOfProducts: element.products)
+            orders.append(order)
+        }
+    }
     
     func addProduct() {
         let model = ProductModel(

@@ -16,6 +16,7 @@ class DatabaseManager {
     
     @ObservedResults(DatabaseUser.self) var savedUsers
     @ObservedResults(DatabaseProduct.self) var savedProducts
+    @ObservedResults(DatabaseOrder.self) var savedOrders
     
     func registration(login: String, password: String) {
         let user = DatabaseUser()

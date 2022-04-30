@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		B857F623281D7C6E006BA16A /* CategoryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B857F622281D7C6E006BA16A /* CategoryType.swift */; };
+		B857F625281D906A006BA16A /* TabBarForAdmin.swift in Sources */ = {isa = PBXBuildFile; fileRef = B857F624281D906A006BA16A /* TabBarForAdmin.swift */; };
+		B857F627281D90A2006BA16A /* TabForAdmin.swift in Sources */ = {isa = PBXBuildFile; fileRef = B857F626281D90A2006BA16A /* TabForAdmin.swift */; };
+		B857F629281D9106006BA16A /* TabItemForAdmin.swift in Sources */ = {isa = PBXBuildFile; fileRef = B857F628281D9105006BA16A /* TabItemForAdmin.swift */; };
+		B85E3CA7281D93CA00CF648F /* AllOrdersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85E3CA6281D93CA00CF648F /* AllOrdersView.swift */; };
 		B8BC9944281C1C8600806F64 /* ShopApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8BC9943281C1C8600806F64 /* ShopApp.swift */; };
 		B8BC9946281C1C8600806F64 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8BC9945281C1C8600806F64 /* ContentView.swift */; };
 		B8BC9948281C1C8700806F64 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8BC9947281C1C8700806F64 /* Assets.xcassets */; };
@@ -36,7 +40,7 @@
 		B8BC9987281C552400806F64 /* AccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8BC9986281C552400806F64 /* AccountViewModel.swift */; };
 		B8BC998C281C570500806F64 /* BasketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8BC998B281C570500806F64 /* BasketView.swift */; };
 		B8BC998F281C799000806F64 /* AddProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8BC998E281C799000806F64 /* AddProductView.swift */; };
-		B8BC9991281C7DC400806F64 /* AddProductViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8BC9990281C7DC400806F64 /* AddProductViewModel.swift */; };
+		B8BC9991281C7DC400806F64 /* AdminViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8BC9990281C7DC400806F64 /* AdminViewModel.swift */; };
 		B8FF0F51281CF96200284DA9 /* DatabaseOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8FF0F50281CF96200284DA9 /* DatabaseOrder.swift */; };
 		B8FF0F53281CFA1400284DA9 /* OrderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8FF0F52281CFA1400284DA9 /* OrderModel.swift */; };
 		B8FF0F55281D00B300284DA9 /* OrdersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8FF0F54281D00B300284DA9 /* OrdersView.swift */; };
@@ -44,6 +48,10 @@
 
 /* Begin PBXFileReference section */
 		B857F622281D7C6E006BA16A /* CategoryType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryType.swift; sourceTree = "<group>"; };
+		B857F624281D906A006BA16A /* TabBarForAdmin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarForAdmin.swift; sourceTree = "<group>"; };
+		B857F626281D90A2006BA16A /* TabForAdmin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabForAdmin.swift; sourceTree = "<group>"; };
+		B857F628281D9105006BA16A /* TabItemForAdmin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItemForAdmin.swift; sourceTree = "<group>"; };
+		B85E3CA6281D93CA00CF648F /* AllOrdersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllOrdersView.swift; sourceTree = "<group>"; };
 		B8BC9940281C1C8600806F64 /* Shop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8BC9943281C1C8600806F64 /* ShopApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopApp.swift; sourceTree = "<group>"; };
 		B8BC9945281C1C8600806F64 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -71,7 +79,7 @@
 		B8BC9986281C552400806F64 /* AccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewModel.swift; sourceTree = "<group>"; };
 		B8BC998B281C570500806F64 /* BasketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketView.swift; sourceTree = "<group>"; };
 		B8BC998E281C799000806F64 /* AddProductView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProductView.swift; sourceTree = "<group>"; };
-		B8BC9990281C7DC400806F64 /* AddProductViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProductViewModel.swift; sourceTree = "<group>"; };
+		B8BC9990281C7DC400806F64 /* AdminViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminViewModel.swift; sourceTree = "<group>"; };
 		B8FF0F50281CF96200284DA9 /* DatabaseOrder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseOrder.swift; sourceTree = "<group>"; };
 		B8FF0F52281CFA1400284DA9 /* OrderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderModel.swift; sourceTree = "<group>"; };
 		B8FF0F54281D00B300284DA9 /* OrdersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersView.swift; sourceTree = "<group>"; };
@@ -137,6 +145,7 @@
 			children = (
 				B8BC9945281C1C8600806F64 /* ContentView.swift */,
 				B8BC9959281C1DCB00806F64 /* TabBar.swift */,
+				B857F624281D906A006BA16A /* TabBarForAdmin.swift */,
 			);
 			path = Navigation;
 			sourceTree = "<group>";
@@ -169,7 +178,7 @@
 				B8BC9974281C2B7D00806F64 /* AuthorizationViewModel.swift */,
 				B8BC9984281C54C100806F64 /* MenuViewModel.swift */,
 				B8BC9986281C552400806F64 /* AccountViewModel.swift */,
-				B8BC9990281C7DC400806F64 /* AddProductViewModel.swift */,
+				B8BC9990281C7DC400806F64 /* AdminViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -178,7 +187,9 @@
 			isa = PBXGroup;
 			children = (
 				B8BC995B281C1E1300806F64 /* Tab.swift */,
+				B857F626281D90A2006BA16A /* TabForAdmin.swift */,
 				B8BC995D281C1E2F00806F64 /* TabItem.swift */,
+				B857F628281D9105006BA16A /* TabItemForAdmin.swift */,
 				B8BC995F281C1E7A00806F64 /* PreferenceKeys.swift */,
 				B8BC997C281C358D00806F64 /* ProductModel.swift */,
 				B8BC997E281C35F200806F64 /* ProductType.swift */,
@@ -244,6 +255,7 @@
 			isa = PBXGroup;
 			children = (
 				B8BC998E281C799000806F64 /* AddProductView.swift */,
+				B85E3CA6281D93CA00CF648F /* AllOrdersView.swift */,
 			);
 			path = AdminFlow;
 			sourceTree = "<group>";
@@ -326,11 +338,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				B8BC9967281C1F1300806F64 /* MenuView.swift in Sources */,
+				B85E3CA7281D93CA00CF648F /* AllOrdersView.swift in Sources */,
 				B8FF0F53281CFA1400284DA9 /* OrderModel.swift in Sources */,
 				B8BC9977281C2D4500806F64 /* TextFieldStyles.swift in Sources */,
 				B8BC995A281C1DCB00806F64 /* TabBar.swift in Sources */,
 				B8BC996D281C1F6A00806F64 /* DatabaseManager.swift in Sources */,
 				B8BC997B281C356F00806F64 /* ProductView.swift in Sources */,
+				B857F629281D9106006BA16A /* TabItemForAdmin.swift in Sources */,
 				B8BC9973281C226100806F64 /* RegistrationView.swift in Sources */,
 				B8BC9975281C2B7D00806F64 /* AuthorizationViewModel.swift in Sources */,
 				B8BC9946281C1C8600806F64 /* ContentView.swift in Sources */,
@@ -340,7 +354,8 @@
 				B8BC9969281C1F1F00806F64 /* AccountView.swift in Sources */,
 				B8BC998C281C570500806F64 /* BasketView.swift in Sources */,
 				B8BC998F281C799000806F64 /* AddProductView.swift in Sources */,
-				B8BC9991281C7DC400806F64 /* AddProductViewModel.swift in Sources */,
+				B857F627281D90A2006BA16A /* TabForAdmin.swift in Sources */,
+				B8BC9991281C7DC400806F64 /* AdminViewModel.swift in Sources */,
 				B8BC995E281C1E2F00806F64 /* TabItem.swift in Sources */,
 				B8BC996F281C20FE00806F64 /* DatabaseUser.swift in Sources */,
 				B8BC9983281C4D6100806F64 /* DetailView.swift in Sources */,
@@ -350,6 +365,7 @@
 				B8FF0F55281D00B300284DA9 /* OrdersView.swift in Sources */,
 				B8BC997D281C358D00806F64 /* ProductModel.swift in Sources */,
 				B8FF0F51281CF96200284DA9 /* DatabaseOrder.swift in Sources */,
+				B857F625281D906A006BA16A /* TabBarForAdmin.swift in Sources */,
 				B8BC995C281C1E1300806F64 /* Tab.swift in Sources */,
 				B8BC9979281C2DE200806F64 /* ButtonStyles.swift in Sources */,
 				B8BC9971281C219800806F64 /* DatabaseProduct.swift in Sources */,

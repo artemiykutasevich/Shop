@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct AddProductView: View {
-    @StateObject private var viewModel = AddProductViewModel()
+    @StateObject private var viewModel = AdminViewModel()
     
     var body: some View {
         NavigationView {
@@ -46,6 +46,10 @@ struct AddProductView: View {
                 })
             }
             .navigationTitle("Add new product")
+            .safeAreaInset(edge: .bottom) {
+                Color.clear.frame(height: 70)
+            }
+            .background(Color("Color-4"))
         }
     }
 }

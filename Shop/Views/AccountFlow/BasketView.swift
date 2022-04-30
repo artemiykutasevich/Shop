@@ -11,6 +11,10 @@ struct BasketView: View {
     @StateObject private var viewModel = AccountViewModel()
     @State private var showingSheet = false
     
+    init() {
+        UITableView.appearance().backgroundColor = UIColor(Color("Color-4"))
+    }
+    
     var body: some View {
         List {
             ForEach(viewModel.basket) { element in
@@ -32,7 +36,7 @@ struct BasketView: View {
             }
         }
         .safeAreaInset(edge: .bottom) {
-            Color.clear.frame(height: 50)
+            Color.clear.frame(height: 70)
         }
         .alert("Офрмить заказ", isPresented: $showingSheet) {
             Button("Нет", role: .destructive) {}

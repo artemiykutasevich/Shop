@@ -10,13 +10,22 @@ import SwiftUI
 struct ContentView: View {
     @AppStorage("ActiveUserID") private var activeUserID: String = ""
     @AppStorage("selectedTab") private var selectedTab: Tab = .menu
+    @AppStorage("selectedTabForAdmin") var selectedTabForAdmin: TabForAdmin = .addProduct
     
     var body: some View {
         ZStack {
             if activeUserID == "" {
                 AuthorizationView()
             } else if activeUserID == "Admin" {
-                AddProductView()
+                Group {
+                    switch selectedTabForAdmin {
+                    case .addProduct:
+                        AddProductView()
+                    case .allOrders:
+                        AllOrdersView()
+                    }
+                }
+                TabBarForAdmin()
             } else {
                 Group {
                     switch selectedTab {
