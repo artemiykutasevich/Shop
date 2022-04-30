@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B857F623281D7C6E006BA16A /* CategoryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B857F622281D7C6E006BA16A /* CategoryType.swift */; };
 		B8BC9944281C1C8600806F64 /* ShopApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8BC9943281C1C8600806F64 /* ShopApp.swift */; };
 		B8BC9946281C1C8600806F64 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8BC9945281C1C8600806F64 /* ContentView.swift */; };
 		B8BC9948281C1C8700806F64 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8BC9947281C1C8700806F64 /* Assets.xcassets */; };
@@ -42,6 +43,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B857F622281D7C6E006BA16A /* CategoryType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryType.swift; sourceTree = "<group>"; };
 		B8BC9940281C1C8600806F64 /* Shop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8BC9943281C1C8600806F64 /* ShopApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopApp.swift; sourceTree = "<group>"; };
 		B8BC9945281C1C8600806F64 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -181,6 +183,7 @@
 				B8BC997C281C358D00806F64 /* ProductModel.swift */,
 				B8BC997E281C35F200806F64 /* ProductType.swift */,
 				B8FF0F52281CFA1400284DA9 /* OrderModel.swift */,
+				B857F622281D7C6E006BA16A /* CategoryType.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -333,6 +336,7 @@
 				B8BC9946281C1C8600806F64 /* ContentView.swift in Sources */,
 				B8BC997F281C35F200806F64 /* ProductType.swift in Sources */,
 				B8BC9944281C1C8600806F64 /* ShopApp.swift in Sources */,
+				B857F623281D7C6E006BA16A /* CategoryType.swift in Sources */,
 				B8BC9969281C1F1F00806F64 /* AccountView.swift in Sources */,
 				B8BC998C281C570500806F64 /* BasketView.swift in Sources */,
 				B8BC998F281C799000806F64 /* AddProductView.swift in Sources */,

@@ -31,9 +31,12 @@ struct BasketView: View {
                 .listRowBackground(Color("Color-1"))
             }
         }
+        .safeAreaInset(edge: .bottom) {
+            Color.clear.frame(height: 50)
+        }
         .alert("Офрмить заказ", isPresented: $showingSheet) {
             Button("Нет", role: .destructive) {}
-            Button("Оформит", role: .cancel) {
+            Button("Оформить", role: .cancel) {
                 viewModel.payForGoods()
             }
         }

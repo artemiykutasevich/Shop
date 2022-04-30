@@ -15,32 +15,65 @@ struct DetailView: View {
     
     let product: ProductModel
     
+    @State var value = 1
+    
     var body: some View {
         ZStack {
             VStack {
                 Spacer()
                 
-                Image(product.imageName.rawValue)
-                    .resizable()
-                    .scaledToFit()
-                    .frame(height: 150)
-                    .cornerRadius(25)
-                
-                Text(product.name)
-                    .font(.title)
-                    .fontWeight(.bold)
-                
-                Text("\(product.price.description) $")
-                    .font(.title3)
-                    .fontWeight(.semibold)
-                
-                Text(product.productType.rawValue)
-                    .font(.body)
+                Group {
+                    Image(product.imageName.rawValue)
+                        .resizable()
+                        .scaledToFit()
+                        .frame(height: 150)
+                        .cornerRadius(25)
+                    
+                    Text(product.name)
+                        .font(.title)
+                        .fontWeight(.bold)
+                    
+                    Text("\(product.price.description) $")
+                        .font(.title3)
+                        .fontWeight(.semibold)
+                    
+                    Text(product.productType.rawValue)
+                        .font(.body)
+                }
                 
                 Spacer()
                 
                 Text(product.body)
                     .font(.body)
+                
+                Spacer()
+                
+                HStack {
+                    Button(action: {
+                        if value > 1 {
+                            value -= 1
+                        }
+                    }, label: {
+                        Image(systemName: "minus")
+                            .foregroundColor(.black)
+                            .frame(width: 20, height: 20, alignment: .center)
+                            .graffitiButtonStyle(color: Color("Color-2"))
+                    })
+                    
+                    Text("\(value)")
+                        .font(.title)
+                        .fontWeight(.bold)
+                    
+                    Button(action: {
+                        value += 1
+                    }, label: {
+                        Image(systemName: "plus")
+                            .foregroundColor(.black)
+                            .frame(width: 20, height: 20, alignment: .center)
+                            .graffitiButtonStyle(color: Color("Color-2"))
+                    })
+                }
+                Text("Количество элементов в заказе")
                 
                 Spacer()
             }
@@ -49,20 +82,22 @@ struct DetailView: View {
             }
             
             Button(action: {
-                addToBasket()
+                for _ in 1...value {
+                    addToBasket()
+                }
                 showingAlert = true
             }, label: {
                 Text("Положить в корзину")
                     .fontWeight(.bold)
                     .foregroundColor(.primary)
-                    .graffitiButtonStyle(color: .gray)
+                    .graffitiButtonStyle(color: Color("Color"))
             })
             .frame(maxHeight: .infinity, alignment: .bottom)
             .ignoresSafeArea()
             .offset(y: -60)
         }
         .alert("Товар добавлен в корзину", isPresented: $showingAlert) {
-            Button("Good", role: .cancel) {}
+            Button("Good", role: .cancel) { value = 1 }
         }
         .navigationTitle("About \(product.name)")
         .navigationBarTitleDisplayMode(.inline)
